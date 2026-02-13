@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: docai-pdf-converter
+    env: python
+    buildCommand: "pip install -r requirements.txt && apt-get update && apt-get install -y libreoffice"
+    startCommand: "python -m app.main"
+    envVars:
+      - key: STORAGE_PROVIDER
+        value: local
+      - key: PORT
+        value: 8000
+    # Higher disk space might be needed for LibreOffice
+    plan: starter

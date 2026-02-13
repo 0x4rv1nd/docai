@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-multipart
+jinja2
+pdf2docx
+supabase
+python-dotenv
+aiofiles

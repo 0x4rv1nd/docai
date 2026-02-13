@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docer | High-Fidelity PDF Watermark Remover</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Docer</h1>
+            <p>Elite PDF Watermark Remover. High fidelity, zero clutter.</p>
+        </header>
+
+        <main>
+            <div id="drop-zone" class="drop-zone">
+                <div class="drop-zone__prompt">
+                    <div class="icon">📄</div>
+                    <span>Drag & Drop PDF or click to browse</span>
+                    <small>Max 100MB</small>
+                </div>
+                <input type="file" name="file" id="file-input" class="drop-zone__input" accept="application/pdf">
+            </div>
+
+            <div id="status-container" class="status-container hidden">
+                <div class="loader"></div>
+                <p id="status-text">Uploading...</p>
+                <div class="progress-bar-bg">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </div>
+
+            <div id="result-container" class="result-container hidden">
+                <div class="success-icon">Check</div>
+                <h3>Conversion Ready!</h3>
+                <a id="download-btn" href="#" class="btn-primary" download>Download PDF</a>
+                <button id="reset-btn" class="btn-secondary">Convert another</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Docer. Production Grade Service.</p>
+        </footer>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
