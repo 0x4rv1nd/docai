@@ -4,7 +4,9 @@ FROM python:3.11-slim
 RUN apt-get update && apt-get install -y \
     libreoffice \
     libreoffice-java-common \
-    openjdk-17-jre-headless \
+    default-jre-headless \
+    poppler-utils \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app

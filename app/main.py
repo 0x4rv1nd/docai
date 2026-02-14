@@ -28,6 +28,10 @@ ALLOWED_MIME_TYPES = ["application/pdf"]
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
 @app.post("/upload")
 async def upload_document(
     background_tasks: BackgroundTasks,
@@ -60,7 +64,7 @@ async def upload_document(
         "status": "processing"
     }
 
-@app.get("/download/{file_id}")
+@app.api_route("/download/{file_id}", methods=["GET", "HEAD"])
 async def download_document(file_id: str):
     """
     Return the high-fidelity PDF if ready. Supports HEAD for polling.
