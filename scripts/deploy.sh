@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Docer Deployment Script for EC2
+# DocAI Deployment Script for EC2
 set -e
 
-echo "🚀 Starting Docer deployment..."
+echo "🚀 Starting DocAI deployment..."
 
 # 1. Update and install dependencies
 sudo apt-get update
@@ -40,5 +40,5 @@ fi
 echo "🏗️ Building and starting containers..."
 docker compose up --build -d
 
-echo "✨ Deployment complete! Docer is running on port 8000."
+echo "✨ Deployment complete! DocAI is running on port 8000."
 echo "Check logs with: docker compose logs -f"
