@@ -13,7 +13,7 @@ from app.converter import process_conversion
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("api")
 
-app = FastAPI(title="Docer | High-Fidelity PDF Watermark Remover")
+app = FastAPI(title="DocAI | High-Fidelity PDF Watermark Remover")
 
 # Mount static and templates
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -109,7 +109,7 @@ async def cleanup_old_files():
 
 @app.on_event("startup")
 async def startup():
-    logger.info("Docer Starting up...")
+    logger.info("DocAI Starting up...")
     # Run a quick cleanup on startup
     import asyncio
     asyncio.create_task(cleanup_old_files())

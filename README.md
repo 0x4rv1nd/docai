@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 
-Docer is a production-ready, minimalist web application for high-fidelity PDF watermark remover. It uses a smart reflow pipeline to ensure your documents look perfect after removing watermarks.
+DocAI is a production-ready, minimalist web application for high-fidelity PDF watermark remover. It uses a smart reflow pipeline to ensure your documents look perfect after removing watermarks.
 
 ## 🚀 Deployment to Render
 
